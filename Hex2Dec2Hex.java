@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Hex2Dec2Hex {
 	private static final String error = "Error!";
 	private static final char yes = 'y';
@@ -6,6 +8,8 @@ public class Hex2Dec2Hex {
 	private static final int D2H = 16;
 	
    public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);	
+   	
       System.out.println("Hello! I am your friendly number converter.");
 
       char doContinue = 'y';
@@ -28,7 +32,7 @@ public class Hex2Dec2Hex {
       String goodbye = "See you soon.";
       do {
          System.out.println("Countinue (y/n)?");
-         answer = In.readChar();
+         answer = input.readChar();
          if(answer != yes && answer != no)
             System.out.println(error);
          else if(answer == no)
@@ -69,7 +73,7 @@ public class Hex2Dec2Hex {
       int Dec = 0;
       do {
          System.out.println("Enter a decimal number:");
-         Dec = In.readInt();
+         Dec = input.readInt();
          if (Dec < 0) {
             System.out.println(error);
          }
