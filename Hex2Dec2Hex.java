@@ -34,7 +34,7 @@ public class Hex2Dec2Hex {
       String goodbye = "See you soon.";
       do {
          System.out.println("Countinue (y/n)?");
-         answer = input.nextChar();
+         answer = (input.nextLine()).charAt(0);
          if(answer != yes && answer != no)
             System.out.println(error);
          else if(answer == no)
